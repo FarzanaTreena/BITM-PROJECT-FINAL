@@ -31,6 +31,9 @@ public class FlightFinderTest {
 	@Test (priority = 2)
 	public void FlightFindingTest() {
 		driver.findElement(By.xpath(XpathUtils.FlightFinder.OneWay_BTN)).click();
+		driver.findElement(By.xpath(XpathUtils.FlightFinder.DROPDOWN_PASSENGERS)).sendKeys("2");
+		driver.findElement(By.xpath(XpathUtils.FlightFinder.Departing)).sendKeys("Acapulco");
+		driver.findElement(By.xpath(XpathUtils.FlightFinder.Continue)).click();
 	}
 
 }
