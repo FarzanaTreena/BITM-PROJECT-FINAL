@@ -1,88 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
+<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10395" started-at="2020-03-05T16:50:20 BDT" finished-at="2020-03-05T16:50:30 BDT">
+  <suite name="AutomationTest" duration-ms="14670" started-at="2020-03-06T23:33:18 BDT" finished-at="2020-03-06T23:33:32 BDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10395" started-at="2020-03-05T16:50:20 BDT" finished-at="2020-03-05T16:50:30 BDT">
+    <test name="Login Test" duration-ms="14670" started-at="2020-03-06T23:33:18 BDT" finished-at="2020-03-06T23:33:32 BDT">
+      <class name="com.tigerit.TestProjectByTreena.Test.LoginTest">
+        <test-method status="PASS" signature="checkLoginPageTitle()[pri:1, instance:com.tigerit.TestProjectByTreena.Test.LoginTest@2758fe70]" name="checkLoginPageTitle" duration-ms="7980" started-at="2020-03-06T23:33:18 BDT" finished-at="2020-03-06T23:33:26 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkLoginPageTitle -->
+        <test-method status="PASS" signature="logintest(java.util.List)[pri:2, instance:com.tigerit.TestProjectByTreena.Test.LoginTest@2758fe70]" name="logintest" duration-ms="5303" started-at="2020-03-06T23:33:27 BDT" data-provider="loginData" finished-at="2020-03-06T23:33:32 BDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[LoginDTO [username=tutorial, password=tutorial]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logintest -->
+      </class> <!-- com.tigerit.TestProjectByTreena.Test.LoginTest -->
       <class name="com.tigerit.TestProjectByTreena.Test.FlightFinderTest">
-        <test-method status="FAIL" signature="checkTitle()[pri:1, instance:com.tigerit.TestProjectByTreena.Test.FlightFinderTest@3701eaf6]" name="checkTitle" duration-ms="10341" started-at="2020-03-05T16:50:20 BDT" finished-at="2020-03-05T16:50:30 BDT">
-          <exception class="java.lang.ExceptionInInitializerError">
-            <full-stacktrace>
-              <![CDATA[java.lang.ExceptionInInitializerError
-at com.tigerit.TestProjectByTreena.Test.FlightFinderTest.checkTitle(FlightFinderTest.java:21)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.WebDriverException: permission denied
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-4J4JR0Q', ip: '192.168.103.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
-Driver info: driver.version: FirefoxDriver
-remote stacktrace: 
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
-at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
-at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
-at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
-at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
-at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:147)
-at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
-at com.tigerit.TestProjectByTreena.Utils.DriverManager.<clinit>(DriverManager.java:15)
-... 29 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ExceptionInInitializerError -->
+        <test-method status="PASS" signature="checkTitle()[pri:1, instance:com.tigerit.TestProjectByTreena.Test.FlightFinderTest@1f36e637]" name="checkTitle" duration-ms="258" started-at="2020-03-06T23:33:32 BDT" finished-at="2020-03-06T23:33:32 BDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkTitle -->
-        <test-method status="FAIL" signature="FlightFindingTest()[pri:2, instance:com.tigerit.TestProjectByTreena.Test.FlightFinderTest@3701eaf6]" name="FlightFindingTest" duration-ms="6" started-at="2020-03-05T16:50:30 BDT" finished-at="2020-03-05T16:50:30 BDT">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="FlightFindingTest(java.util.List)[pri:2, instance:com.tigerit.TestProjectByTreena.Test.FlightFinderTest@1f36e637]" name="FlightFindingTest" duration-ms="247" started-at="2020-03-06T23:33:32 BDT" data-provider="flightFinderData" finished-at="2020-03-06T23:33:32 BDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[FlightFinderDTO [passenger=2, depart=null], FlightFinderDTO [passenger=London, depart=null]]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at com.tigerit.TestProjectByTreena.Test.FlightFinderTest.FlightFindingTest(FlightFinderTest.java:33)
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+at com.tigerit.TestProjectByTreena.Test.FlightFinderTest.FlightFindingTest(FlightFinderTest.java:40)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -113,11 +74,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FlightFindingTest -->
       </class> <!-- com.tigerit.TestProjectByTreena.Test.FlightFinderTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Login Test -->
+  </suite> <!-- AutomationTest -->
 </testng-results>

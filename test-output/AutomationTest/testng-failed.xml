@@ -5,8 +5,7 @@
     <classes>
       <class name="com.tigerit.TestProjectByTreena.Test.FlightFinderTest">
         <methods>
-          <include name="checkTitle"/>
-          <include name="FlightFindingTest"/>
+          <include name="FlightFindingTest" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.tigerit.TestProjectByTreena.Test.FlightFinderTest -->
     </classes>

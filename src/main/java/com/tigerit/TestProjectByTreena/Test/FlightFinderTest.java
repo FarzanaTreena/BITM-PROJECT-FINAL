@@ -1,5 +1,7 @@
 package com.tigerit.TestProjectByTreena.Test;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,6 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.tigerit.TestProjectByTreena.DTO.FlightFinderDTO;
+import com.tigerit.TestProjectByTreena.DataProvider.FlightFinderDataProvider;
 import com.tigerit.TestProjectByTreena.Utils.DriverManager;
 import com.tigerit.TestProjectByTreena.Utils.UrlTextUtils;
 import com.tigerit.TestProjectByTreena.Utils.XpathUtils;
@@ -28,12 +32,14 @@ public class FlightFinderTest {
 		System.out.println("Flight Finder Page Title Verified.");
 	}
 	
-	@Test (priority = 2)
-	public void FlightFindingTest() {
+	@Test (priority = 2, dataProvider="flightFinderData",dataProviderClass=FlightFinderDataProvider.class)
+	public void FlightFindingTest(List<FlightFinderDTO> flightfinderdata) {
+		for(FlightFinderDTO flightfinder : flightfinderdata) {
 		driver.findElement(By.xpath(XpathUtils.FlightFinder.OneWay_BTN)).click();
-		driver.findElement(By.xpath(XpathUtils.FlightFinder.DROPDOWN_PASSENGERS)).sendKeys("2");
-		driver.findElement(By.xpath(XpathUtils.FlightFinder.Departing)).sendKeys("Acapulco");
+		driver.findElement(By.xpath(XpathUtils.FlightFinder.DROPDOWN_PASSENGERS)).sendKeys(flightfinder.getPassenger());
+		driver.findElement(By.xpath(XpathUtils.FlightFinder.Departing)).sendKeys(flightfinder.getDepart());
 		driver.findElement(By.xpath(XpathUtils.FlightFinder.Continue)).click();
+		}
 	}
 
 }

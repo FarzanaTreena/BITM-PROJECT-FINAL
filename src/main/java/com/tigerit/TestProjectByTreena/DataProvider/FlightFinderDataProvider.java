@@ -7,14 +7,16 @@ import org.testng.annotations.DataProvider;
 import com.tigerit.TestProjectByTreena.Utils.ExcelUtils;
 
 public class FlightFinderDataProvider {
+	
 	//value will pass as flightfinder data
-		@DataProvider(name="loginData")
+		@DataProvider(name="flightFinderData")
+		
 		//gets flightfinder data object
-		public static Object [][] getLoginData(){
+		public static Object [][] getflightFinderData(){
 			try {
 				return new Object[][]{
 						{
-							ExcelUtils.getLoginData()
+							ExcelUtils.getflightFinderData()
 						},
 					};
 			} catch (IOException e) {

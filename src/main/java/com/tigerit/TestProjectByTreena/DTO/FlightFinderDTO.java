@@ -1,25 +1,27 @@
 package com.tigerit.TestProjectByTreena.DTO;
 
 public class FlightFinderDTO {
-	private String username;
-	private String password;
-	public String getUsername() {
-		return username;
+	
+	private String passenger;
+	private String depart;
+	
+	public String getPassenger() {
+		return passenger;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setPassenger(String passenger) {
+		this.passenger = passenger;
 	}
-	public String getPassword() {
-		return password;
+	public String getDepart() {
+		return depart;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setDepart(String depart) {
+		this.depart = depart;
 	}
 	
 	//turns into string values
 	@Override
 	public String toString() {
-		return "LoginDTO [username=" + username + ", password=" + password + "]";
+		return "FlightFinderDTO [passenger=" + passenger + ", depart=" + depart + "]";
 	}
 
 }
